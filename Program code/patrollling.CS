@@ -10,8 +10,8 @@ public class EnemyPatrol : MonoBehaviour
 
     [SerializeField] private float speed;
     private Vector3 initScale;
-    private bool movingLeft;
-
+   public bool movingRight = true;
+    
 
     [SerializeField] private float idleDuration;
     private float idleTimer;
@@ -25,23 +25,24 @@ public class EnemyPatrol : MonoBehaviour
     }
    
 
-    private void Update()
+   private void Update()
     {
-        if (movingLeft)
-        {
-            if (enemy.position.x >= leftEdge.position.x)
-                MoveInDirection(-1);
-            else
-                DirectionChange();
-        }
-        else
+        if (movingRight)
         {
             if (enemy.position.x <= rightEdge.position.x)
                 MoveInDirection(1);
             else
                 DirectionChange();
         }
+        else
+        {
+            if (enemy.position.x >= leftEdge.position.x)
+                MoveInDirection(-1);
+            else
+                DirectionChange();
+        }
     }
+
 
     private void DirectionChange()
     {
