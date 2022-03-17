@@ -41,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
     
 
 
-private void OnCollisionEnter2D(Collision2D col)
+private void OnCollisionEnter2D()
 {
-    if(Mathf.Abs(body.velocity.y) <0.001f)
+    if(Mathf.Abs(body.velocity.y) <0.01f)
     {    
         grounded = true;
     }
