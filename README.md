@@ -1,5 +1,5 @@
 # Hello! 👋
-Yokoso,this is the space where you will get to see what we actualy hold.
+Hello,this is the space where you will get to see what we actualy hold.
 
 # Mates:-
 1)Pranav chopdekar 
